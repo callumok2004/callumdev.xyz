@@ -71,7 +71,8 @@
     "@next/next/no-html-link-for-pages": "off",
     "react-hooks/exhaustive-deps": "off",
     "no-async-promise-executor": "off",
-    "@next/next/no-img-element": "off"
+    "@next/next/no-img-element": "off",
+    "no-useless-escape": "off"
   },
   "reportUnusedDisableDirectives": true,
   "noInlineConfig": true,
