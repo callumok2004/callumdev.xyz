@@ -1,8 +1,81 @@
 {
-  "extends": "next/core-web-vitals",
+  "root": true,
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "project": "./tsconfig.json"
+  },
   "rules": {
-    "react/no-unescaped-entities": 0,
-    "react-hooks/exhaustive-dep": 0,
-    "@next/next/no-img-element": 0
-  }
+    "clientLogLevel": 0,
+    "semi": [
+      "warn",
+      "always",
+      {
+        "omitLastInOneLineBlock": true
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "warn",
+      {
+        "max": 1,
+        "maxEOF": 0,
+        "maxBOF": 0
+      }
+    ],
+    "quotes": [
+      "warn"
+    ],
+    "indent": "off",
+    "camelcase": "off",
+    "comma-dangle": [
+      "warn",
+      "never"
+    ],
+    "one-var": [
+      "warn",
+      "consecutive"
+    ],
+    "linebreak-style": [
+      "warn",
+      "unix"
+    ],
+    "no-var": "off",
+    "no-undef": "off",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "TSEnumDeclaration[const=true]",
+        "message": "Usage of const enums is forbidden."
+      }
+    ],
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "no-async-promise-executor": "off",
+    "@next/next/no-img-element": "off"
+  },
+  "reportUnusedDisableDirectives": true,
+  "noInlineConfig": true,
+  "plugins": [
+    "@typescript-eslint"
+  ]
 }
