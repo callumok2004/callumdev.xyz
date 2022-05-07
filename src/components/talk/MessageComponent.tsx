@@ -8,7 +8,7 @@ const MessageComponent = () => {
     message = useRef<string>(""),
     [sending, setSending] = useState(false),
     [errMsg, setErrMsg] = useState(""),
-    emailRegex = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/),
+    emailRegex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/),
     sendMessage = async () => {
       if (email.current == "" || message.current == "") return setErrMsg("Please fill out all fields!");
       if (!emailRegex.test(email.current)) return setErrMsg("Hmm, that doesn't look like an email.");

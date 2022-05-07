@@ -1,7 +1,17 @@
 {
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "extendedDiagnostics": true,
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -12,8 +22,30 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "noImplicitAny": false,
+    "incremental": true,
+    "baseUrl": "./src/",
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@util/*": [
+        "util/*"
+      ],
+      "@context/*": [
+        "context/*"
+      ]
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "next-env-custom.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "next.config.mjs"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
