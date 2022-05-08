@@ -6,7 +6,7 @@ type Data = {
   message: string;
 };
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const data = req.body as Data;
 
@@ -16,7 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (data.message.length > 1000) return res.status(500).json({ result: "MESSAGE_TOO_LONG" });
   if (data.email.length > 500) return res.status(500).json({ result: "NAME_TOO_LONG" });
 
-  axios
+  await axios
     .post(process.env.WEBHOOK_URL as string, {
       embeds: [
         {
