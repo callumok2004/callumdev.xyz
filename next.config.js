@@ -19,5 +19,13 @@ module.exports = {
         permanent: true
       }
     ]
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/home',
+        destination: '/'
+      }
+    ]
   }
 }
