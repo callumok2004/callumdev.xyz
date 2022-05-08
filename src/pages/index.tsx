@@ -35,7 +35,7 @@ const positions = [
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
         transition={{ ease: "easeOut", duration: 0.15 }}
-        className="mt-24 w-full mb-32"
+        className="mt-24 w-full"
       >
         <h1 className="mt-36 font-bold text-4xl md:text-5xl mb-4">Hey, I'm Callum 👋</h1>
         <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
