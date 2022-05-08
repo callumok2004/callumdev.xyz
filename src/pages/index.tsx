@@ -26,6 +26,30 @@ const positions = [
     description: "An online gaming community.",
     rank: "TTT Server Owner",
     url: "https://zarpgaming.com"
+  },
+  {
+    name: "buildergroop",
+    description: "A diverse and open community of ambitious gen-z builders, striving to build a better future.",
+    rank: "Team Member",
+    url: "https://discord.gg/rUWDQFCS4t"
+  },
+  {
+    name: "DDI Development",
+    description: "Home to Youtube Music, a discord bot in over 220k servers!",
+    rank: "Bot Developer",
+    url: "https://discord.gg/FrAgmAsjAj"
+  },
+  {
+    name: "Mineflux",
+    description: "Minecraft server.",
+    rank: "Developer",
+    url: "https://mineflux.net/"
+  },
+  {
+    name: "Dreamers Network",
+    description: "Minecraft Server.",
+    rank: "Developer",
+    url: "https://dreamers.icu/"
   }
 ],
   Index = ({ stats, topRepos }: AppProps) => {
