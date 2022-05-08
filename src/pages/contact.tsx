@@ -3,9 +3,9 @@ import React from "react";
 import { FiMail } from "react-icons/fi";
 import { SiDiscord, SiTwitter } from "react-icons/si";
 
-import ContactLink from "../components/talk/ContactLink";
-import MessageComponent from "../components/talk/MessageComponent";
-import TimeStatus from "../components/talk/TimeStatus";
+import ContactLink from "@components/talk/ContactLink";
+import MessageComponent from "@components/talk/MessageComponent";
+import TimeStatus from "@components/talk/TimeStatus";
 
 const Talk = () => {
   return (

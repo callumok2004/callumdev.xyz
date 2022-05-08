@@ -8,9 +8,9 @@ import { Router } from "next/router";
 import NProgress from "nprogress";
 import { useEffect } from "react";
 
-import Footer from "../components/Footer";
-import Nav from "../components/Nav";
-import Spotify from "../components/Spotify";
+import Footer from "@components/Footer";
+import Nav from "@components/Nav";
+import Spotify from "@components/Spotify";
 
 import type { AppProps } from "next/app";
 Router.events.on("routeChangeStart", () => NProgress.start());

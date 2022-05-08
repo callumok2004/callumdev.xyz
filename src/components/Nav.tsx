@@ -6,7 +6,8 @@ import { FiMail } from "react-icons/fi";
 import { HiMenu, HiX } from "react-icons/hi";
 import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
 
-import { classNames } from "../util/classNames";
+import { classNames } from "@util/classNames";
+
 import ThemeToggle from "./ThemeToggle";
 
 const LandingButton = ({ name, link, selected }: { name: string; link: string; selected: boolean }) => {
