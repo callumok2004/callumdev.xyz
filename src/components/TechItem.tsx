@@ -15,3 +15,9 @@ export const TechItem = ({ name, icon }: TechProps) => {
     </li>
   );
 };
+
+declare module "react-tippy" {
+  interface TooltipProps {
+    children: any;
+  }
+}

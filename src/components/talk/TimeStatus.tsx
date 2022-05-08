@@ -5,7 +5,8 @@ const TimeStatus = () => {
     [awake, setAwake] = useState<boolean>(true);
 
   function updateTime() {
-    const current = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
+    const current = new Date().toLocaleString("en-US", { timeZone: "Europe/Dublin" });
+
     setTime(`${current.slice(-11, -6)}${current.slice(-3, -1)}.M.`);
     setTimeout(updateTime, 60 * 1000);
 

@@ -6,8 +6,7 @@ import { animated, useSpring } from "react-spring";
 import { classNames } from "../../util/classNames";
 
 const calc = (x: number, y: number) => [-(y - window.innerHeight / 3) / 35, (x - window.innerWidth / 1.5) / 30, 1.05],
-  trans = (x: number, y: number, s: number): string =>
-    `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`,
+  trans = (x: number, y: number, s: number): string => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`,
   ContactLink = ({
     name,
     icon,

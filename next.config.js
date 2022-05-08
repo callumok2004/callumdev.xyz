@@ -5,22 +5,17 @@ module.exports = {
     return [
       {
         source: '/github',
-        destination: 'https://github.com/cnrad',
+        destination: 'https://github.com/callumok2004',
         permanent: true
       },
       {
         source: '/twitter',
-        destination: 'https://twitter.com/notcnrad',
+        destination: 'https://twitter.com/callumdev_',
         permanent: true
       },
       {
         source: '/linkedin',
-        destination: 'https://linkedin.com/in/cnrad',
-        permanent: true
-      },
-      {
-        source: '/new',
-        destination: 'https://h-cnrad.vercel.app/?pinned=https://raw.githubusercontent.com/cnrad/h.cnrad.dev/master/src/bookmarks.json&background=https://source.unsplash.com/random/1920x1080/?sunset,blue,pink',
+        destination: 'https://www.linkedin.com/in/callum-okane-642046234/',
         permanent: true
       }
     ]
