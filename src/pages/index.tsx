@@ -28,9 +28,9 @@ const positions = [
     rank: "TTT Server Owner",
     url: "https://zarpgaming.com"
   }
-]
+],
 
-const Index = ({ stats, topRepos }: AppProps) => {
+ Index = ({ stats, topRepos }: AppProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
