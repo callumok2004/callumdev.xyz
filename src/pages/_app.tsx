@@ -47,9 +47,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           <AnimatePresence exitBeforeEnter>
             <Component {...pageProps} key={router.pathname} />
           </AnimatePresence>
-          <Footer />
         </div>
         <Spotify />
+        <Footer />
       </div>
     </>
   );
