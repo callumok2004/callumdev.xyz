@@ -5,11 +5,6 @@ const Footer = () => {
         <h1 className="text-black dark:text-white/50 text-2xl font-semibold">Callum OKane</h1>
         <h2 className="text-black/60 dark:text-white/30 text-base">Software Engineer • 2022</h2>
       </div>
-      <div>
-        <span>Forked from <a style={{
-          color: "rgba(100, 100, 255)"
-        }} href="https://github.com/cnrad/cnrad-dev">cnrad.dev</a></span>
-      </div>
     </div>
   </>;
 };

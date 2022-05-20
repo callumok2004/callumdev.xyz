@@ -22,6 +22,12 @@ const positions = [
     url: "https://wallswipe.com"
   },
   {
+    name: "PreMiD",
+    description: "PreMiD is a simple, configurable utility that allows you to show what you're doing on the web in your Discord now playing status.",
+    rank: "Support Agent",
+    url: "https://premid.app/"
+  },
+  {
     name: "ZARP Gaming",
     description: "An online gaming community.",
     rank: "TTT Server Owner",
@@ -41,15 +47,9 @@ const positions = [
   },
   {
     name: "Mineflux",
-    description: "Minecraft server.",
+    description: "An upcoming Minecraft server.",
     rank: "Developer",
     url: "https://mineflux.net/"
-  },
-  {
-    name: "Dreamers Network",
-    description: "Minecraft Server.",
-    rank: "Developer",
-    url: "https://dreamers.icu/"
   }
 ],
   Index = ({ stats, topRepos }: AppProps) => {

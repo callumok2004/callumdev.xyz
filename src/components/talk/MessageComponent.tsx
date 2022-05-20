@@ -4,7 +4,8 @@ import { ImSpinner2 } from "react-icons/im";
 import { RiSendPlane2Fill } from "react-icons/ri";
 
 const MessageComponent = () => {
-  const email = useRef<string>(""),
+  const name = useRef<string>(""),
+    email = useRef<string>(""),
     message = useRef<string>(""),
     [sending, setSending] = useState(false),
     [errMsg, setErrMsg] = useState(""),
@@ -16,6 +17,7 @@ const MessageComponent = () => {
       setSending(true);
 
       const response = await axios.post("/api/send", {
+        name: name.current,
         email: email.current,
         message: message.current
       });
@@ -30,6 +32,14 @@ const MessageComponent = () => {
 
   return (
     <div className="md:col-span-2 row-span-3 bg-opacity-50 bg-white dark:bg-white/5 rounded-md p-4 border border-zinc-800/50">
+      <h1 className="font-bold text-sm dark:text-slate-500 mb-1">NAME / DISCORD</h1>
+      <input
+        placeholder="John Doe"
+        type="text"
+        onChange={(e: any) => (name.current = e.target.value)}
+        className="w-full p-2 mb-4 rounded-md bg-slate-300/50 dark:bg-slate-200/5 text-sm placeholder:text-gray-600 dark:placeholder:text-slate-200/20"
+      />
+
       <h1 className="font-bold text-sm dark:text-slate-500 mb-1">EMAIL</h1>
       <input
         placeholder="example@gmail.com"
