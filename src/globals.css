@@ -13,6 +13,10 @@ body {
     overscroll-behavior-y: none;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 a {
     color: inherit;
     text-decoration: none;
