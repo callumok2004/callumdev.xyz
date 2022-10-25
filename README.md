@@ -8,4 +8,4 @@ Redirects:
 - https://callumdev.xyz/linkedin
 
 
-# Full credit goes to https://github.com/cnrad/cnrad.dev for this!
+#### Credit to https://github.com/cnrad/cnrad.dev for the base code which I expanded on! <3
