@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const Talk = () => {
+const NotFound = () => {
   return (
     <motion.div
       key="talk"
@@ -17,4 +17,4 @@ const Talk = () => {
   );
 };
 
-export default Talk;
+export default NotFound;

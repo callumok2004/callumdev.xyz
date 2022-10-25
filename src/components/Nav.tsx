@@ -5,6 +5,7 @@ import { ReactElement, useState } from "react";
 import { FiMail } from "react-icons/fi";
 import { HiMenu, HiX } from "react-icons/hi";
 import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
+import { Tooltip } from "react-tippy";
 
 import { classNames } from "@util/classNames";
 
@@ -51,12 +52,13 @@ const LandingButton = ({ name, link, selected }: { name: string; link: string; s
       </Link>
     );
   },
-
-  LinkButton = ({ icon, href }: { icon: ReactElement; href: string }) => {
+  LinkButton = ({ title, icon, href }: any) => {
     return (
-      <a target="_blank" rel="noreferrer" href={href}>
-        {icon}
-      </a>
+      <Tooltip title={title} position={"top"} duration={250}>
+        <a target="_blank" rel="noreferrer" href={href}>
+          {icon}
+        </a>
+      </Tooltip>
     );
   },
   Nav = () => {
@@ -78,18 +80,25 @@ const LandingButton = ({ name, link, selected }: { name: string; link: string; s
 
           <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
             <LinkButton
+              title="GitHub"
               href={"https://github.com/callumok2004"}
               icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
             />
             <LinkButton
+              title="Twitter"
               href={"https://twitter.com/callumdev_"}
               icon={<SiTwitter className="w-6 h-6 cursor-pointer" />}
             />
             <LinkButton
+              title="LinkedIn"
               href={"https://www.linkedin.com/in/callum-okane-642046234/"}
               icon={<SiLinkedin className="w-6 h-6 cursor-pointer" />}
             />
-            <LinkButton href={"mailto:hello@callumdev.xyz"} icon={<FiMail className="w-6 h-6 cursor-pointer" />} />
+            <LinkButton
+              title="Email"
+              href={"mailto:hello@callumdev.xyz"}
+              icon={<FiMail className="w-6 h-6 cursor-pointer" />}
+            />
           </div>
         </motion.div>
 
