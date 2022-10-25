@@ -44,12 +44,6 @@ const positions = [
     description: "Home to Youtube Music, a discord bot in over 220k servers!",
     rank: "Bot Developer",
     url: "https://discord.gg/FrAgmAsjAj"
-  },
-  {
-    name: "Mineflux",
-    description: "An upcoming Minecraft server.",
-    rank: "Developer",
-    url: "https://mineflux.net/"
   }
 ],
   Index = ({ stats, topRepos }: AppProps) => {
