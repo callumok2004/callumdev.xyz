@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import {
-  SiCss3, SiDocker, SiExpress, SiFigma, SiGit, SiHeroku, SiHtml5, SiJavascript, SiMongodb, SiMysql,
-  SiNextdotjs as SiNextJs, SiNodedotjs as SiNodeJs, SiPhp, SiReact, SiTypescript,
-  SiVisualstudiocode, SiYarn, SiLua
+  SiCss3, SiDocker, SiExpress, SiFigma, SiGit, SiHeroku, SiHtml5, SiJavascript, SiLua, SiMongodb,
+  SiMysql, SiNextdotjs as SiNextJs, SiNodedotjs as SiNodeJs, SiPhp, SiReact, SiTypescript,
+  SiVisualstudiocode, SiYarn
 } from "react-icons/si";
 
 import PositionItem from "@components/PositionItem";
@@ -47,13 +47,13 @@ const positions = [
   },
   {
     name: "Find Radios",
-    description: "desc",
+    description: "FindRadios helps people to find and view radio stations all in one place!",
     rank: "Website Developer",
     url: "https://findradios.net"
   },
   {
     name: "Helping Hands",
-    description: "desc",
+    description: "Helping Hands is a community of people who are willing to help others who may be struggling with their mental health or just need someone to talk to.",
     rank: "Developer",
     url: "https://discord.gg/MvurE2QQVr"
   },
@@ -82,20 +82,19 @@ const positions = [
           <TechItem icon={SiTypescript} name="TypeScript" />
           <TechItem icon={SiJavascript} name="JavaScript" />
           <TechItem icon={SiLua} name="Lua" />
+          <TechItem icon={SiNextJs} name="Next.js" />
+          <TechItem icon={SiNodeJs} name="Node.js" />
+          <TechItem icon={SiReact} name="React.js" />
           <TechItem icon={SiPhp} name="PHP" />
           <TechItem icon={SiHtml5} name="HTML5" />
           <TechItem icon={SiCss3} name="CSS3" />
           <TechItem icon={SiVisualstudiocode} name="VSCode" />
-          <TechItem icon={SiReact} name="React.js" />
-          <TechItem icon={SiNodeJs} name="Node.js" />
           <TechItem icon={SiYarn} name="Yarn" />
           <TechItem icon={SiExpress} name="Express" />
-          <TechItem icon={SiNextJs} name="Next.js" />
           <TechItem icon={SiGit} name="Git" />
           <TechItem icon={SiDocker} name="Docker" />
           <TechItem icon={SiMongodb} name="MongoDB" />
           <TechItem icon={SiMysql} name="MySQL" />
-          <TechItem icon={SiHeroku} name="Heroku" />
           <TechItem icon={SiFigma} name="Figma" />
         </div>
 
@@ -147,7 +146,12 @@ const positions = [
     );
   };
 
-export async function getStaticProps() {
+export const getServerSideProps = async ({ res }) => {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
+
   const stats = await fetch("https://api.github-star-counter.workers.dev/user/callumok2004").then(res => res.json()),
     repos = await fetch("https://api.github.com/users/callumok2004/repos?type=owner&per_page=100").then(res => res.json()),
     topRepos = repos
@@ -155,9 +159,8 @@ export async function getStaticProps() {
       .slice(0, 4);
 
   return {
-    props: { stats, topRepos },
-    revalidate: 3600
+    props: { stats, topRepos }
   };
-}
+};
 
 export default Index;

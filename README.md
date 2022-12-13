@@ -1,6 +1,6 @@
 # callumdev.xyz
 
-Source for my static personal site.
+Source for my personal site - https://callumdev.xyz - Built with NextJS!
 
 Redirects:
 - https://callumdev.xyz/github

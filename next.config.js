@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
+  swcMinify: true,
+  optimizeFonts: true,
+  compiler: {
+    removeConsole: true
+  },
   async redirects() {
     return [
       {
