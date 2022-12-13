@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import {
   SiCss3, SiDocker, SiExpress, SiFigma, SiGit, SiHeroku, SiHtml5, SiJavascript, SiMongodb, SiMysql,
   SiNextdotjs as SiNextJs, SiNodedotjs as SiNodeJs, SiPhp, SiReact, SiTypescript,
-  SiVisualstudiocode, SiYarn
+  SiVisualstudiocode, SiYarn, SiLua
 } from "react-icons/si";
 
 import PositionItem from "@components/PositionItem";
@@ -22,15 +22,15 @@ const positions = [
     url: "https://wallswipe.com"
   },
   {
-    name: "PreMiD",
+    name: "Recodive (PreMiD)",
     description: "PreMiD is a simple, configurable utility that allows you to show what you're doing on the web in your Discord now playing status.",
-    rank: "Support Agent",
+    rank: "Support Agent & Presence Developer",
     url: "https://premid.app/"
   },
   {
     name: "ZARP Gaming",
-    description: "An online gaming community.",
-    rank: "TTT Server Owner",
+    description: "An online gaming community focusing on Garry's Mod Servers.",
+    rank: "Server Owner",
     url: "https://zarpgaming.com"
   },
   {
@@ -41,10 +41,22 @@ const positions = [
   },
   {
     name: "DDI Development",
-    description: "Home to Youtube Music, a discord bot in over 220k servers!",
+    description: "Home to Flow Music, a discord msuic bot in over 280k servers!",
     rank: "Bot Developer",
     url: "https://discord.gg/FrAgmAsjAj"
-  }
+  },
+  {
+    name: "Find Radios",
+    description: "desc",
+    rank: "Website Developer",
+    url: "https://findradios.net"
+  },
+  {
+    name: "Helping Hands",
+    description: "desc",
+    rank: "Developer",
+    url: "https://discord.gg/MvurE2QQVr"
+  },
 ],
   Index = ({ stats, topRepos }: AppProps) => {
     return (
@@ -69,6 +81,7 @@ const positions = [
         <div className="w-full flex flex-wrap flex-row justify-center p-1 border border-slate-800 rounded-md bg-white/10 dark:bg-black/10 mb-12">
           <TechItem icon={SiTypescript} name="TypeScript" />
           <TechItem icon={SiJavascript} name="JavaScript" />
+          <TechItem icon={SiLua} name="Lua" />
           <TechItem icon={SiPhp} name="PHP" />
           <TechItem icon={SiHtml5} name="HTML5" />
           <TechItem icon={SiCss3} name="CSS3" />
