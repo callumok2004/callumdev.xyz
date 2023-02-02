@@ -30,7 +30,7 @@ const positions = [
   {
     name: "ZARP Gaming",
     description: "An online gaming community focusing on Garry's Mod Servers.",
-    rank: "Server Owner",
+    rank: "Community Developer",
     url: "https://zarpgaming.com"
   },
   {
