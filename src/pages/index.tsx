@@ -35,7 +35,7 @@ const positions = [
   },
   {
     name: "DDI Development",
-    description: "Home to Flow Music, a discord msuic bot in over 280k servers!",
+    description: "Home to Flow Music, a discord music bot in over 280k servers!",
     rank: "Bot Developer",
     url: "https://discord.gg/FrAgmAsjAj"
   }
